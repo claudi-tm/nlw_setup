@@ -1,2 +1,3 @@
 # nlw_setup
-Project     o de desenvolvimento de um tracker de habitos usando vários linguagens da rocketseat 
+Projecto da trilha Ignite
+ Desenvolvimento de um tracker de habitos usando vários linguagens da rocketseat 
