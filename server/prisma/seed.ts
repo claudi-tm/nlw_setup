@@ -12,8 +12,8 @@ const thirdHabitId = "fa1a1bcf-3d87-4626-8c0d-d7fd1255ac00";
 const thirdHabitCreationDate = new Date("2023-01-08T03:00:00.000");
 
 async function main() {
-	await prisma.habit.deleteMany();
-	await prisma.day.deleteMany();
+	// await prisma.habit.deleteMany();
+	//await prisma.day.deleteMany();
 
 	/**
 	 * Create habits
@@ -21,7 +21,7 @@ async function main() {
 	await Promise.all([
 		prisma.habit.create({
 			data: {
-				id: firstHabitId,
+				// id: firstHabitId,
 				title: "Beber 2L água",
 				created_at: firstHabitCreationDate,
 				weekDays: {
@@ -32,7 +32,7 @@ async function main() {
 
 		prisma.habit.create({
 			data: {
-				id: secondHabitId,
+				// id: secondHabitId,
 				title: "Exercitar",
 				created_at: secondHabitCreationDate,
 				weekDays: {
@@ -43,7 +43,7 @@ async function main() {
 
 		prisma.habit.create({
 			data: {
-				id: thirdHabitId,
+				// id: thirdHabitId,
 				title: "Dormir 8h",
 				created_at: thirdHabitCreationDate,
 				weekDays: {
