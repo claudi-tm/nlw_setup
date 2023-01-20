@@ -15,7 +15,7 @@ async function main() {
 	// await prisma.habit.deleteMany();
 	//await prisma.day.deleteMany();
 
-	/**
+	/**c
 	 * Create habits
 	 */
 	await Promise.all([
