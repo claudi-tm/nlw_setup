@@ -15,7 +15,7 @@ export function Home() {
 			<Header></Header>
 			<View className="flex-row mt-6 mb-2">
 				{WEEK_DAYS.map((weekDay, index) => (
-					<Text
+					<Text key={`${weekDay}-${index}`}
 						className="text-zinc-400 text-xl font-bold text-center mx-1"
 						style={{ width: DAY_SIZE }}
 					>
