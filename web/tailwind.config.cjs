@@ -9,6 +9,10 @@ module.exports = {
       colors: {
         background: '#09090A'
       },
+
+      gridTemplateRows: { //Tailwind has max of 6 rows this code adds a extra row the 7th
+        7: 'repeact(7, minmax(0, 1fr))'
+      }
     },
   },
   plugins: [],
