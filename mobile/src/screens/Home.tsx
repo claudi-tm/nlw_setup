@@ -1,4 +1,4 @@
-import { Text, View, ScrollView} from "react-native";
+import { Text, View, ScrollView } from "react-native";
 import { DAY_SIZE, HabitDay } from "../components/HabitDay";
 import { Header } from "../components/Header";
 import { generateRangeDatesFromYearStart } from "../utils/generate-range-between-dates";
@@ -24,26 +24,26 @@ export function Home() {
 				))}
 			</View>
 
-            <ScrollView showsVerticalScrollIndicator={false} contentContainerStyle={{paddingBottom: 100}}>
-            <View className="flex-row flex-wrap">
-				{DATES_FROM_YEAR_START.map((date) => (
-					<HabitDay key={date.toISOString()}></HabitDay>
-				))}
-                {AMOUNT_OF_DAYS_TO_FILL > 0 &&
-				Array.from({
-					length: AMOUNT_OF_DAYS_TO_FILL,
-				}).map((_, index) => (
-					<View
-						className="bg-zinc-900 rounded-lg border-2 m-1 border-zinc-800 opacity-40"
-						style={{ width: DAY_SIZE, height: DAY_SIZE }}
-					></View>
-				))}
-			</View>
-            </ScrollView>
-
-			
-
-			
+			<ScrollView
+				showsVerticalScrollIndicator={false}
+				contentContainerStyle={{ paddingBottom: 100 }}
+			>
+				<View className="flex-row flex-wrap">
+					{DATES_FROM_YEAR_START.map((date) => (
+						<HabitDay key={date.toISOString()}></HabitDay>
+					))}
+					{AMOUNT_OF_DAYS_TO_FILL > 0 &&
+						Array.from({
+							length: AMOUNT_OF_DAYS_TO_FILL,
+						}).map((_, index) => (
+							<View
+								key={index}
+								className="bg-zinc-900 rounded-lg border-2 m-1 border-zinc-800 opacity-40"
+								style={{ width: DAY_SIZE, height: DAY_SIZE }}
+							></View>
+						))}
+				</View>
+			</ScrollView>
 		</View>
 	);
 }
